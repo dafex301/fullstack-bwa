@@ -84,6 +84,9 @@ header {
                         }
                     }
                 }
+                &.active {
+                    font-weight: bold;
+                }
             }
         }
     }

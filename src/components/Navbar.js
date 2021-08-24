@@ -2,12 +2,11 @@ import React from 'react'
 import LogoWeb from './LogoWeb'
 import Button from 'elements/Button'
 
-export default function Navbar() {
+export default function Navbar(props) {
 
-    // TODO
-    // const getNavLinkClass = path => {
-    //     return props.location.pathname === path ? " active": "";
-    // }
+    const getNavLinkClass = path => {
+        return props.location.pathname === path ? " active": "";
+    }
 
     return (
         <header className="spacing-sm">
@@ -16,22 +15,22 @@ export default function Navbar() {
                     <LogoWeb />
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav right">
-                            <li className='nav-item'>
+                            <li className={`nav-item${getNavLinkClass('/')}`}>
                                 <Button className="nav-link" type="link" href="/">
                                     Home
                                 </Button>
                             </li>
-                            <li className="nav-item">
+                            <li className={`nav-item${getNavLinkClass('/browse-by')}`}>
                                 <Button className="nav-link" type="link" href="/browse-by">
                                     Browse by
                                 </Button>
                             </li>
-                            <li className="nav-item">
+                            <li className={`nav-item${getNavLinkClass('/stories')}`}>
                                 <Button className="nav-link" type="link" href="/stories">
                                     Stories
                                 </Button>
                             </li>
-                            <li className="nav-item">
+                            <li className={`nav-item${getNavLinkClass('/agents')}`}>
                                 <Button className="nav-link" type="link" href="/agents">
                                     Agents
                                 </Button>

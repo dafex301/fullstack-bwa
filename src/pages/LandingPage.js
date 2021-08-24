@@ -1,11 +1,12 @@
-import Navbar from "components/Navbar";
+import React, { Component } from 'react'
+import Navbar from 'components/Navbar'
 
-const LandingPage = () => {
-    return (  
-        <div>
-            <Navbar></Navbar>
-        </div>
-    );
+export default class LandingPage extends Component {
+    render() {
+        return (
+            <>
+                <Navbar {...this.props}></Navbar>  
+            </>
+        )
+    }
 }
- 
-export default LandingPage;
