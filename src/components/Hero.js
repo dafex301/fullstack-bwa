@@ -1,12 +1,13 @@
 import React from "react";
 
 import Button from "elements/Button";
-import formatNumber from "utils/formatNumber";
 
 import Banner from "../images/banner.png";
 import iconCities from "../images/icon/icon-cities.svg";
 import iconTraveler from "../images/icon/icon-traveler.svg";
 import iconTreasure from "../images/icon/icon-treasure.svg";
+
+import formatNumber from "utils/formatNumber";
 
 export default function Hero(props) {
   const showMostPicked = () => {
