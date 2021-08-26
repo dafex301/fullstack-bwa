@@ -151,6 +151,10 @@ section {
     min-height: 30px;
     border-radius: 0 15px;
     font-weight: 400;
+
+    &.yellow {
+      background-color: $yellow;
+    }
     span {
       font-weight: 300;
     }
@@ -230,4 +234,8 @@ section {
       }
     }
   }
+}
+
+.prop-name-none {
+  text-decoration: none !important;
 }

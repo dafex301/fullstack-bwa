@@ -30,7 +30,7 @@ export default function MostPicked(props) {
                     type="link"
                     href={`/properties/${item._id}`}
                   >
-                    <h5>{item.name}</h5>
+                    <h5 className="property-name">{item.name}</h5>
                   </Button>
                   <span>
                     {item.city}, {item.country}
