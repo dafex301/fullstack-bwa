@@ -8,11 +8,11 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 
 import formatDate from 'utils/formatDate';
-import iconCalendar from 'assets/images/ic_calendar.svg';
+import iconCalendar from 'assets/images/icon-calendar.svg';
 
 export default function Date(props) {
 	const { value, placeholder, name } = props;
-	const { isShowed, setIsShowed } = useState(false);
+	const [isShowed, setIsShowed] = useState(false);
 
 	const datePickerChange = (value) => {
 		const target = {
