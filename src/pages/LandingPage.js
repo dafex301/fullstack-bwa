@@ -6,6 +6,7 @@ import Categories from "components/Categories";
 import Review from "components/Review";
 import Footer from "components/Footer";
 
+
 import landingPage from "json/landingPage.json";
 
 export default class LandingPage extends Component {
