@@ -1,34 +1,30 @@
-import React, { Component } from "react";
-import InputNumber from "elements/Form/InputNumber";
+import React, { Component } from 'react';
+
+import Header from 'components/Navbar';
+import PageDetailTitle from 'components/PageDetailTitle';
+
+import ItemDetails from 'json/itemDetails.json';
 
 export default class DetailsPage extends Component {
-  state = {
-    value: "1",
-  };
+	componentDidMount() {
+		document.title = 'Details Page';
+		window.scrollTo(0, 0);
+	}
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+	render() {
+		const breadcrumb = [
+			{ pageTitle: 'Home', pageHref: '' },
+			{ pageTitle: 'House Details', pageHref: '' },
+		];
 
-  render() {
-    return (
-      <div className="container">
-        <div
-          className="row align-items-center justify-content-center"
-          style={{ height: "100vh" }}
-        >
-          <div className="col-auto">
-            <InputNumber
-              max={30}
-              onChange={this.handleChange}
-              name="value"
-              value={this.state.value}
-              suffix=" night"
-              isSuffixPlural
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
+		return (
+			<>
+				<Header {...this.props}></Header>
+				<PageDetailTitle
+					breadcrumb={breadcrumb}
+					data={ItemDetails}
+				></PageDetailTitle>
+			</>
+		);
+	}
 }

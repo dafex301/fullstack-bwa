@@ -13,7 +13,7 @@ function App() {
 					<Route exact path="/" component={LandingPage}></Route>
 					<Route
 						exact
-						path="/details"
+						path="/properties/:id"
 						component={DetailsPage}
 					></Route>
 					<Route exact path="/example" component={Example}></Route>
