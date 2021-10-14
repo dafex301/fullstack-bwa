@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Fade from 'react-reveal/Fade';
+
 import Header from 'components/Navbar';
 import PageDetailTitle from 'components/PageDetailTitle';
 
@@ -7,6 +9,9 @@ import ItemDetails from 'json/itemDetails.json';
 import FeaturedImages from 'components/FeaturedImages';
 import PageDetailDescription from 'components/PageDetailDescription';
 import BookingForm from 'components/BookingForm';
+import Categories from 'components/Categories';
+import Review from 'components/Review';
+import Footer from 'components/Footer';
 
 export default class DetailsPage extends Component {
 	componentDidMount() {
@@ -22,26 +27,27 @@ export default class DetailsPage extends Component {
 
 		return (
 			<>
-				<Header {...this.props}></Header>
-				<PageDetailTitle
-					breadcrumb={breadcrumb}
-					data={ItemDetails}
-				></PageDetailTitle>
+				<Header {...this.props} />
+				<PageDetailTitle breadcrumb={breadcrumb} data={ItemDetails} />
 				<FeaturedImages data={ItemDetails.imageUrls}></FeaturedImages>
-				<div className="container">
+				<section className="container">
 					<div className="row">
 						<div className="col-7 pr-5">
-							<PageDetailDescription
-								data={ItemDetails}
-							></PageDetailDescription>
+							<Fade bottom>
+								<PageDetailDescription data={ItemDetails} />
+							</Fade>
 						</div>
 						<div className="col-5">
-							<BookingForm
-								itemDetails={ItemDetails}
-							></BookingForm>
+							<Fade bottom>
+								<BookingForm itemDetails={ItemDetails} />
+							</Fade>
 						</div>
 					</div>
-				</div>
+				</section>
+
+				<Categories data={ItemDetails.categories} />
+				<Review data={ItemDetails.testimonial} />
+				<Footer />
 			</>
 		);
 	}

@@ -69,11 +69,11 @@ export default class BookingForm extends Component {
 				<h4 className="mb-3">Start Booking</h4>
 				<h5 className="h2 text-success mb-4">
 					${itemDetails.price}{' '}
-					<span className="text-secondary fw-light">
+					<span className="text-secondary font-weight-light">
 						per {itemDetails.unit}
 					</span>
 				</h5>
-				<label htmlFor="duration">How long will you stay?</label>
+				<label htmlFor="duration">How long you will stay?</label>
 				<InputNumber
 					max={30}
 					suffix={' night'}
@@ -82,28 +82,29 @@ export default class BookingForm extends Component {
 					name="duration"
 					value={data.duration}
 				/>
-				<label htmlFor="date">Pick a Date</label>
+				{/* // TODO: Sinkronisasi Date sama Pick */}
+				<label htmlFor="date">Pick a date</label>
 				<InputDate
 					onChange={this.updateData}
 					name="date"
 					value={data.date}
 				/>
 				<h6
-					className="text-gray-500 fw-light"
+					className="text-gray-500 font-weight-light"
 					style={{ marginBottom: 40 }}
 				>
 					You will pay{' '}
-					<span className="text-gray-900 fw-bold">
+					<span className="text-gray-900">
 						${itemDetails.price * data.duration} USD
 					</span>{' '}
 					per{' '}
-					<span className="text-gray-900 fw-bold">
+					<span className="text-gray-900">
 						{data.duration} {itemDetails.unit}
 						{data.duration > 1 ? 's' : ''}
 					</span>
 				</h6>
 				<Button
-					className="btn py-2 rounded"
+					className="btn"
 					hasShadow
 					isPrimary
 					isBlock
