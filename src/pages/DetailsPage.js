@@ -6,6 +6,7 @@ import PageDetailTitle from 'components/PageDetailTitle';
 import ItemDetails from 'json/itemDetails.json';
 import FeaturedImages from 'components/FeaturedImages';
 import PageDetailDescription from 'components/PageDetailDescription';
+import BookingForm from 'components/BookingForm';
 
 export default class DetailsPage extends Component {
 	componentDidMount() {
@@ -34,7 +35,11 @@ export default class DetailsPage extends Component {
 								data={ItemDetails}
 							></PageDetailDescription>
 						</div>
-						<div className="col-5">Booking Form</div>
+						<div className="col-5">
+							<BookingForm
+								itemDetails={ItemDetails}
+							></BookingForm>
+						</div>
 					</div>
 				</div>
 			</>
