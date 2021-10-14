@@ -59,58 +59,55 @@ export default class BookingForm extends Component {
 			});
 		}
 	}
+
 	render() {
 		const { data } = this.state;
-		const { itemDetails, startBooking } = this.props;
+		const { itemDetails } = this.props;
 
 		return (
 			<div className="card bordered" style={{ padding: '60px 80px' }}>
 				<h4 className="mb-3">Start Booking</h4>
-				<h5 className="h2 text-teal mb-4">
+				<h5 className="h2 text-success mb-4">
 					${itemDetails.price}{' '}
-					<span className="text-gray-500 fw-light">
+					<span className="text-secondary fw-light">
 						per {itemDetails.unit}
 					</span>
 				</h5>
-
-				<label htmlFor="duration">
-					<InputNumber
-						max={30}
-						suffix={' night'}
-						isSuffixPlural
-						onChange={this.updateData}
-						name="duration"
-						value={data.duration}
-					/>
-				</label>
-
+				<label htmlFor="duration">How long will you stay?</label>
+				<InputNumber
+					max={30}
+					suffix={' night'}
+					isSuffixPlural
+					onChange={this.updateData}
+					name="duration"
+					value={data.duration}
+				/>
 				<label htmlFor="date">Pick a Date</label>
 				<InputDate
 					onChange={this.updateData}
 					name="date"
 					value={data.date}
-				></InputDate>
-
+				/>
 				<h6
 					className="text-gray-500 fw-light"
 					style={{ marginBottom: 40 }}
 				>
 					You will pay{' '}
-					<span className="text-gray-900">
+					<span className="text-gray-900 fw-bold">
 						${itemDetails.price * data.duration} USD
 					</span>{' '}
 					per{' '}
-					<span className="text-gray-900">
-						{data.duration} {itemDetails.unit}{' '}
+					<span className="text-gray-900 fw-bold">
+						{data.duration} {itemDetails.unit}
+						{data.duration > 1 ? 's' : ''}
 					</span>
 				</h6>
-
 				<Button
-					className="button py-2 rounded"
+					className="btn py-2 rounded"
 					hasShadow
 					isPrimary
 					isBlock
-					onClick={startBooking}
+					onClick={this.startBooking}
 				>
 					Continue to Book
 				</Button>
