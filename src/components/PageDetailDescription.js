@@ -21,7 +21,7 @@ export default function PageDetailDescription({ data }) {
 								className="d-block mb-2"
 							/>{' '}
 							<span>{feature.qty}</span>{' '}
-							<span className="text-gray-500 font-weight-light">
+							<span className="text-gray-500 fw-light">
 								{feature.name}
 							</span>
 						</div>
