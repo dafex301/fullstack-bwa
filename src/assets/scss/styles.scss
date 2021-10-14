@@ -7,278 +7,285 @@
 
 // scss-docs-start import-stack
 // Configuration
-@import "colorVariables";
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "utilities";
+@import 'colorVariables';
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'utilities';
 
 // Layout & components
-@import "root";
-@import "reboot";
-@import "type";
-@import "images";
-@import "containers";
-@import "grid";
-@import "container-grid";
-@import "tables";
-@import "forms";
-@import "buttons";
-@import "transitions";
-@import "dropdown";
-@import "button-group";
-@import "nav";
-@import "navbar";
-@import "card";
-@import "accordion";
-@import "breadcrumb";
-@import "pagination";
-@import "badge";
-@import "alert";
-@import "progress";
-@import "list-group";
-@import "close";
-@import "toasts";
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
-@import "spinners";
-@import "offcanvas";
-@import "placeholders";
+@import 'root';
+@import 'reboot';
+@import 'type';
+@import 'images';
+@import 'containers';
+@import 'grid';
+@import 'container-grid';
+@import 'tables';
+@import 'forms';
+@import 'buttons';
+@import 'transitions';
+@import 'dropdown';
+@import 'button-group';
+@import 'nav';
+@import 'navbar';
+@import 'card';
+@import 'accordion';
+@import 'breadcrumb';
+@import 'pagination';
+@import 'badge';
+@import 'alert';
+@import 'progress';
+@import 'list-group';
+@import 'close';
+@import 'toasts';
+@import 'modal';
+@import 'tooltip';
+@import 'popover';
+@import 'carousel';
+@import 'spinners';
+@import 'offcanvas';
+@import 'placeholders';
 
 // Helpers
-@import "helpers";
+@import 'helpers';
 
 // Utilities
-@import "utilities/api";
+@import 'utilities/api';
 // scss-docs-end import-stack
 
 .logo-web {
-  height: 70px;
+	height: 70px;
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 header {
-  width: 100%;
-  position: relative;
-  border-bottom: 1px solid $gray-200;
+	width: 100%;
+	position: relative;
+	border-bottom: 1px solid $gray-200;
 
-  .navbar {
-    height: 80px;
-    font-size: 18px;
-    font-weight: 400;
+	.navbar {
+		height: 80px;
+		font-size: 18px;
+		font-weight: 400;
 
-    .navbar-nav {
-      li.nav-item {
-        a {
-          &.nav-link {
-            color: $gray-900;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            border-radius: 5px;
-            &:hover {
-              background-color: $indigo;
-              color: $white;
-            }
-          }
-        }
-        &.active {
-          font-weight: bold;
-        }
-      }
-    }
-  }
+		.navbar-nav {
+			li.nav-item {
+				a {
+					&.nav-link {
+						color: $gray-900;
+						padding-left: 1rem;
+						padding-right: 1rem;
+						border-radius: 5px;
+						&:hover {
+							background-color: $indigo;
+							color: $white;
+						}
+					}
+				}
+				&.active {
+					font-weight: bold;
+				}
+			}
+		}
+	}
 }
 
 section {
-  margin-bottom: 60px;
+	margin-bottom: 60px;
 }
 
 #banner {
-  max-width: 553px;
-  margin-left: 152px;
-  margin-top: 50px;
+	max-width: 553px;
+	margin-left: 152px;
+	margin-top: 50px;
 }
 
 .right {
-  position: absolute;
-  right: 0;
+	position: absolute;
+	right: 0;
 }
 
 .hd-1 {
-  font-size: 42px;
+	font-size: 42px;
 }
 
 .primary-color {
-  color: #16303e;
+	color: #16303e;
 }
 
 .primary-button {
-  border-radius: 10px;
-  box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.25);
 }
 
 .img-cover {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 .img-contain {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
 }
 
 .card {
-  &.bordered {
-    border: 1px solid $gray-200;
-  }
-  border-radius: 15px;
+	&.bordered {
+		border: 1px solid $gray-200;
+	}
+	border-radius: 15px;
 
-  .tag {
-    z-index: 3;
-    font-size: 0.875rem;
-    background-color: $green;
-    padding: 0.25rem 1.25rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: $white;
-    min-height: 30px;
-    border-radius: 0 15px;
-    font-weight: 400;
+	.tag {
+		z-index: 3;
+		font-size: 0.875rem;
+		background-color: $green;
+		padding: 0.25rem 1.25rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: $white;
+		min-height: 30px;
+		border-radius: 0 15px;
+		font-weight: 400;
 
-    &.yellow {
-      background-color: $yellow;
-    }
-    span {
-      font-weight: 300;
-    }
-  }
+		&.yellow {
+			background-color: $yellow;
+		}
+		span {
+			font-weight: 300;
+		}
+	}
 
-  .img-wrapper {
-    height: 100%;
-    margin-bottom: 0;
-    border-radius: 0.9375rem;
-    overflow: hidden;
-  }
+	.img-wrapper {
+		height: 100%;
+		margin-bottom: 0;
+		border-radius: 0.9375rem;
+		overflow: hidden;
+	}
 
-  .meta-wrapper {
-    margin-top: 1rem;
-    h5 {
-      font-size: 1.125rem;
-      margin-bottom: 2px;
-    }
-    span {
-      font-size: 0.875rem;
-    }
-  }
+	.meta-wrapper {
+		margin-top: 1rem;
+		h5 {
+			font-size: 1.125rem;
+			margin-bottom: 2px;
+		}
+		span {
+			font-size: 0.875rem;
+		}
+	}
 
-  &.card-featured {
-    overflow: hidden;
-    cursor: pointer;
-    height: 100%;
-    &:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      transform: scale(1.1);
-      transition: 0.5s transform ease-in-out;
-      z-index: 2;
-      @include gradient-y(rgba($black, 0), rgba($black, 0.51), 0%, 100%);
-    }
+	&.card-featured {
+		overflow: hidden;
+		cursor: pointer;
+		height: 100%;
+		&:after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transform: scale(1.1);
+			transition: 0.5s transform ease-in-out;
+			z-index: 2;
+			@include gradient-y(rgba($black, 0), rgba($black, 0.51), 0%, 100%);
+		}
 
-    .img-wrapper {
-      z-index: 1;
-      margin: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      transform: scale(1.1);
-      transition: 0.25s transform ease-in-out;
-    }
+		.img-wrapper {
+			z-index: 1;
+			margin: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transform: scale(1.1);
+			transition: 0.25s transform ease-in-out;
+		}
 
-    .meta-wrapper {
-      z-index: 4;
-      color: $white;
-      padding: 20px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      transform: translateY(0);
-      transition: 0.3s transform ease-in-out;
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-    }
+		.meta-wrapper {
+			z-index: 4;
+			color: $white;
+			padding: 20px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			transform: translateY(0);
+			transition: 0.3s transform ease-in-out;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
 
-    &:hover {
-      .meta-wrapper {
-        transform: translateY(-10px);
-      }
-      &:after {
-        transform: scale(1);
-      }
-      .img-wrapper {
-        transform: scale(1);
-      }
-    }
-  }
+		&:hover {
+			.meta-wrapper {
+				transform: translateY(-10px);
+			}
+			&:after {
+				transform: scale(1);
+			}
+			.img-wrapper {
+				transform: scale(1);
+			}
+		}
+	}
 }
 
 .prop-name-none {
-  text-decoration: none !important;
+	text-decoration: none !important;
 }
 
 .testimonial-hero,
 .testimonial-hero img {
-  width: 457px;
-  height: 570px;
+	width: 457px;
+	height: 570px;
 }
 
 .rounded-btn {
-  border-radius: 10px;
+	border-radius: 10px;
 }
 
 footer {
-  border-top: 1px solid $gray-200;
-  padding-top: 50px;
+	border-top: 1px solid $gray-200;
+	padding-top: 50px;
 
-  .list-group-item {
-    padding: 0.3125rem 0;
-    border: 0;
-    a,
-    span {
-      color: $gray-500;
-      font-weight: 300;
-    }
-    a:hover {
-      color: $gray-900;
-    }
-  }
+	.list-group-item {
+		padding: 0.3125rem 0;
+		border: 0;
+		a,
+		span {
+			color: $gray-500;
+			font-weight: 300;
+		}
+		a:hover {
+			color: $gray-900;
+		}
+	}
 }
 .copyrights {
-  margin: 40px 0;
-  font-weight: 300;
-  color: $gray-500;
+	margin: 40px 0;
+	font-weight: 300;
+	color: $gray-500;
 }
 
 .brand-tagline {
-  font-weight: 300;
-  color: $gray-500;
+	font-weight: 300;
+	color: $gray-500;
 }
 
 .footer-title {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+main {
+	p {
+		color: $gray-600;
+		font-weight: 300;
+	}
 }
