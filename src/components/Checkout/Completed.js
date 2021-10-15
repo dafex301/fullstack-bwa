@@ -1,6 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import CompletedIllustration from 'assets/images/completed.svg';
+import CompletedIllustration from 'images/completed.svg';
 
 export default function Completed() {
 	return (
