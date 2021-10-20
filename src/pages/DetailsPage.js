@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import Header from 'components/Navbar';
 import PageDetailTitle from 'components/PageDetailTitle';
 
-import ItemDetails from 'json/itemDetails.json';
 import FeaturedImages from 'components/FeaturedImages';
 import PageDetailDescription from 'components/PageDetailDescription';
 import BookingForm from 'components/BookingForm';
