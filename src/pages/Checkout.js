@@ -90,7 +90,7 @@ export default class Checkout extends Component {
 							<Numbering
 								data={steps}
 								current={CurrentStep}
-								style={{ marginBottom: 50 }}
+								style={{ marginBottom: 50, marginTop: 50 }}
 							/>
 
 							<Meta data={steps} current={CurrentStep} />
@@ -104,27 +104,31 @@ export default class Checkout extends Component {
 										data.email !== '' &&
 										data.phone !== '' && (
 											<Fade>
-												<Button
-													className="btn mb-3"
-													type="button"
-													isBlock
-													isPrimary
-													hasShadow
-													onClick={nextStep}
-												>
-													Continue to Book
-												</Button>
+												<div className="text-center">
+													<Button
+														className="btn mb-3"
+														type="button"
+														isBlock
+														isPrimary
+														hasShadow
+														onClick={nextStep}
+													>
+														Continue to Book
+													</Button>
+												</div>
 											</Fade>
 										)}
-									<Button
-										className="btn"
-										type="link"
-										isBlock
-										isLight
-										href={`/properties/${ItemDetails._id}`}
-									>
-										Cancel
-									</Button>
+									<div className="text-center">
+										<Button
+											className="btn"
+											type="link"
+											isBlock
+											isLight
+											href={`/properties/${ItemDetails._id}`}
+										>
+											Cancel
+										</Button>
+									</div>
 								</Controller>
 							)}
 
@@ -134,27 +138,31 @@ export default class Checkout extends Component {
 										data.bankName !== '' &&
 										data.bankHolder !== '' && (
 											<Fade>
-												<Button
-													className="btn mb-3"
-													type="button"
-													isBlock
-													isPrimary
-													hasShadow
-													onClick={nextStep}
-												>
-													Continue to Book
-												</Button>
+												<div className="text-center">
+													<Button
+														className="btn mb-3"
+														type="button"
+														isBlock
+														isPrimary
+														hasShadow
+														onClick={nextStep}
+													>
+														Continue to Book
+													</Button>
+												</div>
 											</Fade>
 										)}
-									<Button
-										className="btn"
-										type="button"
-										isBlock
-										isLight
-										onClick={prevStep}
-									>
-										Cancel
-									</Button>
+									<div className="text-center">
+										<Button
+											className="btn"
+											type="button"
+											isBlock
+											isLight
+											onClick={prevStep}
+										>
+											Cancel
+										</Button>
+									</div>
 								</Controller>
 							)}
 
