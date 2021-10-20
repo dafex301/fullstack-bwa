@@ -30,7 +30,7 @@ export default function Payment(props) {
 									<img
 										src={logoBca}
 										alt="bank central asia"
-										width="60"
+										width="100"
 									/>
 								</div>
 								<div className="col">
@@ -47,7 +47,7 @@ export default function Payment(props) {
 									<img
 										src={logoMandiri}
 										alt="mandiri"
-										width="60"
+										width="100"
 									/>
 								</div>
 								<div className="col">
