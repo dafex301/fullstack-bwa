@@ -42,7 +42,7 @@ export default function MostPicked(props) {
 												href={`/properties/${item._id}`}
 											>
 												<h5 className="property-name">
-													{item.name}
+													{item.title}
 												</h5>
 											</Button>
 											<span>

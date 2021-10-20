@@ -34,7 +34,7 @@ export default function Categories({ data }) {
 															? `${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}`
 															: ''
 													}
-													alt={item.name}
+													alt={item.title}
 													className="img-cover"
 												/>
 											</figure>
@@ -45,7 +45,7 @@ export default function Categories({ data }) {
 													href={`/properties/${item._id}`}
 												>
 													<h5 className="prop-name-none">
-														{item.name}
+														{item.title}
 													</h5>
 												</Button>
 												<span className="text-gray-500">
